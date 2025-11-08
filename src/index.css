@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  background: #0B0E1D !important;
+  background-color: #0B0E1D !important;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', 'Nunito Sans', system-ui, sans-serif;
+  background: #0B0E1D !important;
+  background-color: #0B0E1D !important;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(123, 97, 255, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(0, 229, 255, 0.1) 0px, transparent 50%);
+  color: #E8F9FF !important;
+  overflow-x: hidden;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  background: #0B0E1D !important;
+  background-color: #0B0E1D !important;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0E1D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7B61FF 0%, #00E5FF 100%);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00E5FF 0%, #7EE081 100%);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(11, 14, 29, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(123, 97, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 229, 255, 0.1);
+}
+
+/* Cosmic glow effects */
+.cosmic-glow {
+  box-shadow: 0 0 20px rgba(123, 97, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.3);
+}
+
+.neon-text {
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.8), 0 0 20px rgba(123, 97, 255, 0.6);
+}
+
+/* Hide scrollbar for horizontal scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Twinkling stars animation */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Cosmic gradient animation for text */
+@keyframes cosmicGradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}

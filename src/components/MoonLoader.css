@@ -1,0 +1,74 @@
+/* Moon Loader - Cosmic Theme */
+.moon-loader-container {
+  background-color: #0B0E1D;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.moon-loader-container.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.moon-loader {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #E8F9FF;
+  border: 4px solid #E8F9FF;
+  box-shadow: 0 0 20px rgba(232, 249, 255, 0.6), 0 0 40px rgba(0, 229, 255, 0.4);
+  filter: blur(0.4px);
+  position: relative;
+  overflow: hidden;
+  animation: moonPulse 2s ease-in-out infinite;
+}
+
+.moon-shadow {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background-color: #0B0E1D;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  animation: moonAnimate 3s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  will-change: transform;
+}
+
+@keyframes moonAnimate {
+  0% {
+    transform: translateX(150px);
+    background-color: #0B0E1D;
+  }
+
+  50% {
+    transform: translateX(-10px);
+    background-color: #0B0E1D;
+  }
+
+  100% {
+    transform: translateX(-170px);
+    background-color: #0B0E1D;
+  }
+}
+
+@keyframes moonPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(232, 249, 255, 0.6), 0 0 40px rgba(0, 229, 255, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(232, 249, 255, 0.8), 0 0 60px rgba(0, 229, 255, 0.6);
+  }
+}
+
